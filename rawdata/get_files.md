@@ -1,6 +1,11 @@
 ## Experimental Data
-- ap.bedgraph can be obtained from  #TODO
-- GSE166843_Damage.bedgraph can be obtained from #TODO
+Run `scripts/download_and_preprocess_experimental.sh`
+
+- Following samples are selectioned for the AP dammages (GSE121005)
+  - GSM3428223
+  - GSM3428224
+  - GSM3428225
+- RADD file can be obtained from GSE166843
 
 
 ## COSMIC signature

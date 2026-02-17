@@ -32,3 +32,8 @@ The script will:
 1. Check/install KMC tools if needed
 2. Count k-mers for each chromosome fasta file
 3. Generate a CSV file with k-mer counts per chromosome
+
+# CYTOBAND FILE
+```
+wget https://gist.githubusercontent.com/alexllc/59e4d221efa402de7509b7bec965cb02/raw/12ab39d867d95fd0e122a9a018c3da134247c3a8/cytoBand-human-GRCh38-hg38.txt
+```

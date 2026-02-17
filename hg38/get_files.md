@@ -20,8 +20,8 @@ The script will automatically download KMC 3.2.4 if not present (with user confi
 ```bash
 # Usage: ./get_kmer_count.sh <kmer_size> <input_dir> <output_file>
 cd ../scripts
-./get_kmer_count.sh 3 ../hg38/chromosomes ../hg38/kmer_counts_3N.csv
-./get_kmer_count.sh 5 ../hg38/chromosomes ../hg38/kmer_counts_5N.csv
+./get_kmer_count.sh 3 ../hg38/chromosomes ../hg38/kmer_counts_3N.csv # already present
+./get_kmer_count.sh 5 ../hg38/chromosomes ../hg38/kmer_counts_5N.csv # already present
 ./get_kmer_count.sh 7 ../hg38/chromosomes ../hg38/kmer_counts_7N.csv
 ./get_kmer_count.sh 9 ../hg38/chromosomes ../hg38/kmer_counts_9N.csv
 ./get_kmer_count.sh 11 ../hg38/chromosomes ../hg38/kmer_counts_11N.csv

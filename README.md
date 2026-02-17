@@ -1,5 +1,5 @@
 # MutationvIP
-This repository contains the code to generate the figures and results from the paper [https://www.biorxiv.org/content/10.64898/2026.01.02.697387v1](Linking somatic mutations in cancer to the electronic properties of DNA)
+This repository contains the code to generate the figures and results from the paper [Linking somatic mutations in cancer to the electronic properties of DNA](https://www.biorxiv.org/content/10.64898/2026.01.02.697387v1)
 
 ## Get Started 🚀
 Install dependencies using one of the following methods:

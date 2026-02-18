@@ -93,15 +93,53 @@ def get_table_of_corr(
     return df
 
 
-def aggregate_data(df, kmer_context, on=["type", "context", "db"], over=["type", "db"]):
+def partial_correlation(df, x_col, y_col, control_col, stat_method=stats.pearsonr):
     """
-    kmer_context : df whith at least 'context' and 'all_f' columns
-    on = on chich columns we group the values
-    over = which columns are use to compute the frequency of occurence of the motifs
+    Partial correlation between x and y controlling for control.
+    Formula: r(x,y|z) = (r(x,y) - r(x,z)*r(y,z)) / sqrt((1-r(x,z)²)(1-r(y,z)²))
+    stat_method : callable with signature f(x, y) -> (statistic, pvalue), e.g. stats.pearsonr or stats.spearmanr
+    """
+    from scipy.stats import t as t_dist
+
+    x = df[x_col].to_numpy()
+    y = df[y_col].to_numpy()
+    z = df[control_col].to_numpy()
+
+    r_xy, _ = stat_method(x, y)
+    r_xz, _ = stat_method(x, z)
+    r_yz, _ = stat_method(y, z)
+
+    numerator = r_xy - r_xz * r_yz
+    denominator = np.sqrt((1 - r_xz**2) * (1 - r_yz**2))
+
+    if denominator == 0:
+        return np.nan, 1.0
+
+    r_partial = numerator / denominator
+    n = len(x)
+    t_stat = r_partial * np.sqrt(n - 3) / np.sqrt(1 - r_partial**2)
+    p_value = 2 * (1 - t_dist.cdf(abs(t_stat), n - 3))
+
+    return r_partial, p_value
+
+
+def aggregate_data(
+    df,
+    kmer_context,
+    on=["type", "context", "db"],
+    over=["type", "db"],
+    context_col="context",
+):
+    """
+    df : dataframe with at least a context column and a 'len' column
+    kmer_context : dataframe with at least 'context' and 'frequencies' columns
+    on : columns to group by when aggregating counts
+    over : columns used to compute the frequency of occurrence of the motifs
+    context_col : column in df used as the raw context (default: 'context')
     """
     return (
         df.with_columns(
-            pl.col("small_context")
+            pl.col(context_col)
             .map_elements(get_pyrimidine_strand, return_dtype=pl.String)
             .alias("context"),
         )
@@ -113,8 +151,8 @@ def aggregate_data(df, kmer_context, on=["type", "context", "db"], over=["type",
             .alias("vip"),
             (pl.col("count") / pl.col("count").sum().over(over)).alias("freq"),
         )
-        .join(kmer_context["context", "all_f"], on="context")
-        .with_columns(np.log(pl.col("freq") / pl.col("all_f")).alias("F"))
+        .join(kmer_context["context", "frequencies"], on="context")
+        .with_columns(np.log(pl.col("freq") / pl.col("frequencies")).alias("F"))
     )
 
 

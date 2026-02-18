@@ -17,3 +17,7 @@ Download signature from this page:
 
 Download the zip and extract `COSMIC_v3.4_SBS_GRCh38.txt` to `rawdata/` subdirectory
 
+## CMC export
+Download version 102 of cancer mutation census.
+Extract cmc_export.tsv to `rawdata/cmc/cmc_export.tsv`
+https://cancer.sanger.ac.uk/cosmic/download/cancer-mutation-census/v102/alldata-cmc

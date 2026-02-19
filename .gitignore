@@ -218,3 +218,7 @@ __marimo__/
 /hg38/
 /rawdata/
 /zenodo/
+/outputs/
+/zenodo/
+
+.python-version

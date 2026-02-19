@@ -5,7 +5,6 @@ description = "This repository contains the code to generate the figures and res
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "crossmap>=0.7.3",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.8",
     "numpy>=1.26.4",

@@ -6,7 +6,7 @@
    id="svg1"
    width="2560"
    height="1440"
-   viewBox="0 0 5120 2880"
+   viewBox="0 0 2560 1440"
    sodipodi:docname="graphical_abstract.svg"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -129,7 +129,8 @@
        id="clipPath79">
       <path
          d="m 1494.8438,315.0625 a 33.068363,26.454691 0 0 1 -31.1875,17.65625 33.068363,26.454691 0 0 1 -31.1856,-17.65625 H 276.23828 V 632.19727 H 1791.8145 V 315.0625 Z"
-         id="path80" />
+         id="path80"
+         style="" />
     </clipPath>
     <image
        width="1"
@@ -164,8 +165,8 @@
        y="0"
        inkscape:label="1"
        id="page1"
-       width="5120"
-       height="2880"
+       width="2560"
+       height="1440"
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
@@ -222,7 +223,8 @@
        y="0"
        xlink:href="#image10"
        clip-path="url(#clipPath79)"
-       id="use80" />
+       id="use80"
+       transform="" />
     <path
        id="path10"
        d="m 460.3441,801.6742 c 23.3172,-23.3172 23.3172,-61.1219 0,-84.4392 -23.3173,-23.3172 -61.122,-23.3172 -84.4392,0 -23.3172,23.3173 -23.3172,61.122 0,84.4392 23.3172,23.3172 61.1219,23.3172 84.4392,0 z"

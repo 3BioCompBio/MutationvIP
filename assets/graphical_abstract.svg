@@ -128,9 +128,9 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath79">
       <path
-         d="m 1494.8438,315.0625 a 33.068363,26.454691 0 0 1 -31.1875,17.65625 33.068363,26.454691 0 0 1 -31.1856,-17.65625 H 276.23828 V 632.19727 H 1791.8145 V 315.0625 Z"
-         id="path80"
-         style="" />
+         d="m 1490.7832,315.0625 a 24.344887,20.693153 0 0 1 -24.0039,17.24609 24.344887,20.693153 0 0 1 -24.0039,-17.24609 H 276.23828 V 632.19727 H 1791.8145 V 315.0625 Z"
+         style=""
+         id="path80" />
     </clipPath>
     <image
        width="1"
@@ -150,10 +150,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.49140625"
-     inkscape:cx="868.93482"
-     inkscape:cy="959.49126"
+     inkscape:zoom="0.82152778"
+     inkscape:cx="1279.9324"
+     inkscape:cy="720"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1920"
@@ -223,8 +222,8 @@
        y="0"
        xlink:href="#image10"
        clip-path="url(#clipPath79)"
-       id="use80"
-       transform="" />
+       transform=""
+       id="use80" />
     <path
        id="path10"
        d="m 460.3441,801.6742 c 23.3172,-23.3172 23.3172,-61.1219 0,-84.4392 -23.3173,-23.3172 -61.122,-23.3172 -84.4392,0 -23.3172,23.3173 -23.3172,61.122 0,84.4392 23.3172,23.3172 61.1219,23.3172 84.4392,0 z"

@@ -20,4 +20,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-viper = { git = "https://github.com/Benoitdw/vIPer.git" }
+viper = { git = "https://github.com/3BioCompBio/vIPer.git", tag = "1.0.0" }

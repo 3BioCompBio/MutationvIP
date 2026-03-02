@@ -143,3 +143,19 @@ else
     python "$SCRIPT_DIR/merge_big_wig.py" "$TEMPLATE" "$OUTPUT" "${BW_FILES[@]}"
     echo "  Done: $OUTPUT"
 fi
+
+# ---------------------------------------------------------------------------
+# STEP 4 — Generate experimental.tsv (vIP scores + nucleotide counts)
+# ---------------------------------------------------------------------------
+echo ""
+echo "=== Step 4: Generate experimental.tsv ==="
+
+EXPERIMENTAL="$SCRIPT_DIR/../data/experimental/experimental.tsv"
+
+if [[ -f "$EXPERIMENTAL" ]] && [[ "$FORCE" == false ]]; then
+    echo "  [skip] $(basename "$EXPERIMENTAL") already exists"
+else
+    echo "  Running generate_experimental.py ..."
+    python "$SCRIPT_DIR/generate_experimental.py"
+    echo "  Done: $EXPERIMENTAL"
+fi

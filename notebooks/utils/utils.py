@@ -246,3 +246,16 @@ def plot_regression_plot(data, x, y, **kwargs):
     #     transform=plt.gca().transAxes,
     #     bbox=dict(facecolor="white", alpha=0.5, edgecolor="black"),
     # )
+
+def restore_axes(ax):
+    for spine in ["left", "bottom"]:
+        ax.spines[spine].set_visible(True)
+        ax.spines[spine].set_color("black")
+        ax.spines[spine].set_linewidth(1)
+    ax.tick_params(
+        axis="both", which="both",
+        bottom=True, left=True,
+        labelbottom=True, labelleft=True,
+        colors="black",
+    )
+    ax.set_facecolor("white")
